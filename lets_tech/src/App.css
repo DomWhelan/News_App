@@ -1,0 +1,27 @@
+.App {
+  background-color: azure;
+  padding: 5%;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+@media (max-width: 400px) {
+  .App-header {
+    font-size: 2em;
+  }
+  .articleContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 3vh 0;
+  }
+  .articleImg img {
+    width: 100%;
+  }
+  .articleTitle {
+    font-size: 6vw;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .articleContent {
+    font-size: 1.5em;
+  }
+}
