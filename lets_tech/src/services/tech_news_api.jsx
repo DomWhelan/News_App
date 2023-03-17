@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Articles from "../components/Articles";
 
-const TechArticles = () => {
+export default function TechArticles() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     const fetchArticles = async () => {
@@ -37,6 +37,4 @@ const TechArticles = () => {
       </table>
     </section>
   );
-};
-
-export default TechArticles;
+}
