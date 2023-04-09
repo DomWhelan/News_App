@@ -7,14 +7,16 @@ export default function NavBar() {
   const homeIcon = <FontAwesomeIcon icon={faHome} />;
   const menuIcon = <FontAwesomeIcon icon={faBars} />;
   return (
-    <div className="App-header">
-      <Link to="/" className="Header-icon">
-        {homeIcon}
-      </Link>
-      <span>{"Lets Tech"}</span>
-      <Link to="" className="Header-icon">
-        {menuIcon}
-      </Link>
+    <div className="headerContainer">
+      <div className="header">
+        <Link to="/" className="headerIcon">
+          {homeIcon}
+        </Link>
+        <span>{"Lets Tech"}</span>
+        <Link to="" className="headerIcon">
+          {menuIcon}
+        </Link>
+      </div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ function App() {
     <Router>
       <main>
         <NavBar />
-        <div>
+        <div className="appBody">
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/TechNews" element={<TechArticles />}></Route>
