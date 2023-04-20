@@ -1,6 +1,7 @@
 .App {
+  /* box-sizing: border-box; */
   background-color: azure;
-  padding: 5%;
+  /* padding: 5%; */
   text-align: left;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
@@ -15,27 +16,43 @@
 .link:hover {
   cursor: pointer;
 }
+button:hover {
+  cursor: pointer;
+}
+.hamburger {
+  border: none;
+  padding: 0%;
+  background: none;
+  font-size: 1em;
+}
+.menuDropdownList {
+  margin-right: 1vw;
+  width: fit-content;
+}
+.menuDropdownItem {
+  list-style: none;
+  border: 1px solid #04009d;
+  color: #0600ef;
+  background-color:rgb(158, 155, 155);
+  padding: 4px 12px;
+}
 
 @media (max-width: 800px) {
   .headerContainer {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
+    width:100%;
   }
   .header {
     background-color: rgba(158, 155, 155, 0.5);
     backdrop-filter: blur(12px);
-    width: 1fr;
     font-size: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1vh 4vw;
     color: #0600ef;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
+    padding: 1.5vh 4vw;
     height: fit-content;
   }
 
@@ -43,7 +60,7 @@
     color: #04009d;
   }
   .appBody {
-    margin-top: 60px;
+    margin-top: 68px;
   }
   .articleContainer {
     display: flex;
