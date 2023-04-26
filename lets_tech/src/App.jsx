@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import NavBar from "./components/partials/NavBar";
 import TechArticles from "./components/TechNews";
 import TeslaArticles from "./components/TeslaNews";
+import AppleArticles from "./components/AppleNews";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/TechNews" element={<TechArticles />}></Route>
             <Route path="/TeslaNews" element={<TeslaArticles />}></Route>
+            <Route path="/AppleNews" element={<AppleArticles />}></Route>
           </Routes>
         </div>
       </main>

@@ -16,19 +16,18 @@ export default function NavBar() {
         <span>{"Lets Tech"}</span>
         <Popup 
         trigger={<div className="headerIcon hamburger"> {menuIcon}</div>} 
-        position="left top"
+        position="middle top"
         on="hover"
-        closeOnDocumentClick
         mouseLeaveDelay={300}
         mouseEnterDelay={5}
         arrow={false}
         >
           <div>
             <ul className="menuDropdownList">
-              <li className="menuDropdownItem"><Link className="link" to={"/TechNews"}>{"Tech News"}</Link></li>
-              <li className="menuDropdownItem"><Link className="link" to={"/TechNews"}>{"Tech News"}</Link></li>
-              <li className="menuDropdownItem"><Link className="link" to={"/TechNews"}>{"Tech News"}</Link></li>
-              <li className="menuDropdownItem"><Link className="link" to={"/TechNews"}>{"Tech News"}</Link></li>
+              <li className="menuDropdownItem link"><Link className="link" to={"/TechNews"}>{"Tech Crunch"}</Link></li>
+              <li className="menuDropdownItem link"><Link className="link" to={"/TeslaNews"}>{"Tesla"}</Link></li>
+              <li className="menuDropdownItem link"><Link className="link" to={"/AppleNews"}>{"Apple"}</Link></li>
+              <li className="menuDropdownItem link"><Link className="link" to={"/TechNews"}>{"Tech News"}</Link></li>
             </ul>
           </div>
         </Popup>

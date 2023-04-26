@@ -5,12 +5,12 @@
 import { useEffect, useState } from "react";
 import Articles from "../components/Articles";
 
-const TeslaArticles = () => {
+const AppleArticles = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     const fetchArticles = async () => {
       const response = await fetch(
-        "https://newsapi.org/v2/everything?q=tesla&from=2023-03-26&sortBy=publishedAt&apiKey=c6501b7d86434b21b8e5fead22ba0d3f"
+        "https://newsapi.org/v2/everything?q=apple&from=2023-04-25&to=2023-04-25&sortBy=popularity&apiKey=c6501b7d86434b21b8e5fead22ba0d3f"
       );
 
       const responseData = await response.json();
@@ -43,4 +43,4 @@ const TeslaArticles = () => {
   );
 };
 
-export default TeslaArticles;
+export default AppleArticles;

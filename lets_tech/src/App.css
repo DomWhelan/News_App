@@ -1,7 +1,10 @@
-.App {
-  /* box-sizing: border-box; */
-  background-color: azure;
-  /* padding: 5%; */
+#root {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgb(233, 233, 235);
+  margin: 0 0;
+  padding: 2%;
   text-align: left;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
@@ -15,6 +18,8 @@
 }
 .link:hover {
   cursor: pointer;
+  color: #02013d;
+  background-color: #7195f7;
 }
 button:hover {
   cursor: pointer;
@@ -26,68 +31,85 @@ button:hover {
   font-size: 1em;
 }
 .menuDropdownList {
-  margin-right: 1vw;
-  width: fit-content;
+  position: fixed;
+  top: 36px;
+  right: 0px;
+  width: max-content;
 }
 .menuDropdownItem {
   list-style: none;
-  border: 1px solid #04009d;
-  color: #0600ef;
-  background-color:rgb(158, 155, 155);
+  border: 2px solid #04009d;
+  background-color: rgb(192, 190, 190);
   padding: 4px 12px;
+  font-size: 1em;
+  font-weight: 600;
+}
+.advertisement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.adImage {
+  width: 200px;
+  height: 120px;
+}
+hr {
+  border-color:#7195f7
+}
+.headerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+}
+.header {
+  background-color: rgba(158, 155, 155, 0.5);
+  backdrop-filter: blur(12px);
+  font-size: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #0600ef;
+  padding: 1.5vh 4vw;
+  height: fit-content;
 }
 
-@media (max-width: 800px) {
-  .headerContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-  }
-  .header {
-    background-color: rgba(158, 155, 155, 0.5);
-    backdrop-filter: blur(12px);
-    font-size: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: #0600ef;
-    padding: 1.5vh 4vw;
-    height: fit-content;
-  }
-
-  .headerIcon {
-    color: #04009d;
-  }
-  .appBody {
-    margin-top: 68px;
-  }
-  .articleContainer {
-    display: flex;
-    flex-direction: column;
-    margin: 3vh 0;
-  }
-  img {
-    width: 90vw;
-  }
-  .button {
-    font-size: 1.4em;
-    font-weight: 700;
-    background-color: #D9D9D9;
-    padding: 0.5vh 16vw;
-    border: 2px solid #04009D;
-    border-radius: 16px;
-  }
-  .articleTitle {
-    font-size: 6vw;
-    font-weight: 600;
-    font-family: "Times New Roman", Times, serif;
-  }
-  .articleContent {
-    font-size: 1.5em;
-  }
-  .homeContainer {
-    margin-top: 4vh;
-  }
+.headerIcon {
+  color: #04009d;
+}
+.headerIcon:hover {
+  color: #02013d;
+}
+.appBody {
+  padding-top: 68px;
+}
+.articleContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 3vh 0;
+}
+img {
+  width: 90vw;
+}
+.button {
+  font-size: 1.4em;
+  font-weight: 700;
+  background-color: #D9D9D9;
+  padding: 0.5vh 16vw;
+  border: 2px solid #04009D;
+  border-radius: 16px;
+}
+.articleTitle {
+  font-size: 6vw;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+}
+.articleContent {
+  font-size: 1.5em;
+}
+.homeContainer {
+  margin-top: 0vh;
+}
   
-}
+@media (max-width: 800px) {}
