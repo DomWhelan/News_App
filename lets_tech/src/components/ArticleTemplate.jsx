@@ -1,4 +1,4 @@
-const Articles = (props) => {
+const Article = (props) => {
   return (
     <tr className="articleContainer">
       <td className="articleTitle">{props.title}</td>
@@ -12,4 +12,4 @@ const Articles = (props) => {
   );
 };
 
-export default Articles;
+export default Article;

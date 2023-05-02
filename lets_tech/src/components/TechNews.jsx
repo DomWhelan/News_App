@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Articles from "./Articles";
+import Article from "./ArticleTemplate";
 
 export default function TechArticles() {
   const [articles, setArticles] = useState([]);
@@ -20,7 +20,7 @@ export default function TechArticles() {
   const articleList = [];
   articles.forEach((article) => {
     articleList.push(
-      <Articles
+      <Article
         imageUrl={article.urlToImage}
         id={article.id}
         title={article.title}
@@ -29,7 +29,7 @@ export default function TechArticles() {
     );
   });
 
-  console.log(articleList);
+  // console.log(articleList);
 
   return (
     <section>
