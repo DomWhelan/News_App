@@ -1,2 +1,7 @@
 <h1>Technology News App</h1>
-<p>Start with mobile application</p>
+<h2>To Do List:
+<ul>
+    <li>Blog Page</li>
+    <li>Additional APIs</li>
+    <li>Refactor article pages</li>
+</ul>
