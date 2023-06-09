@@ -19,7 +19,7 @@ export default function Articles(props) {
 
   const articleList = [];
   articles.forEach((article) => {
-    if(titleFilter === '' || article.title.includes(titleFilter)){
+    if(titleFilter === '' || article.title.includes(titleFilter) || article.title.includes((titleFilter.charAt(0).toUpperCase() + titleFilter.slice(1)))){
       articleList.push(
         <Article
           imageUrl={article.urlToImage}
@@ -42,7 +42,7 @@ export default function Articles(props) {
                 className="searchBarInput"
                 placeholder="Search..."
                 onChange={(e) => {
-                    setTitleFilter(e.target.value);
+                    setTitleFilter(e.target.value.toLowerCase());
                 }}
             />
         </div>
