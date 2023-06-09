@@ -63,11 +63,23 @@ button:hover {
 .headerIcon:hover {
   color: #02013d;
 }
+.searchBar{
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  color: #0600ef;
+  font-size: 1.3em;
+}
+.searchBarInput{
+  font-size: 0.7em;
+  margin-left: 4vw;
+  padding: 0.5vh 0.5vw;
+}
 .appBody{
   z-index: 1;
   position: absolute;
   width: 100%;
-  top: 32px;
+  top: 38px;
   left: 0;
 }
 .homeContainer{
@@ -117,4 +129,14 @@ img {
   margin-top: 0vh;
 }
   
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+  img {
+    width: 100%;
+  }
+  .generalInfo {
+    height:48vh;
+  }
+  .articleContent {
+    font-size: 1em;
+  }
+}

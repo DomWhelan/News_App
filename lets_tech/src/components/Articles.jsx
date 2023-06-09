@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import Article from "./ArticleTemplate";
 
 export default function Articles(props) {
+  
   const [articles, setArticles] = useState([]);
+  const [titleFilter, setTitleFilter] = useState('');
+
   useEffect(() => {
-    // const fetchArticles = async () => {
     async function fetchArticles(link){    
       const response = await fetch(link);
       const responseData = await response.json();
@@ -13,24 +15,37 @@ export default function Articles(props) {
       setArticles(allArticles);
     };
     fetchArticles(props.link).catch((err) => console.log(err));
-  }, []);
+  }, [props.link]);
 
   const articleList = [];
   articles.forEach((article) => {
-    articleList.push(
-      <Article
-        imageUrl={article.urlToImage}
-        id={article.id}
-        title={article.title}
-        content={article.content}
-      />
-    );
+    if(titleFilter === '' || article.title.includes(titleFilter)){
+      articleList.push(
+        <Article
+          imageUrl={article.urlToImage}
+          id={article.id}
+          title={article.title}
+          content={article.content}
+        />
+      );
+    } 
   });
 
-  console.log(articleList);
+  window.DEBUG && console.log(articleList);
 
   return (
     <section>
+      <div className="searchBar">
+            <span>{"Search Here ->"}</span>
+            <input
+                type="text"
+                className="searchBarInput"
+                placeholder="Search..."
+                onChange={(e) => {
+                    setTitleFilter(e.target.value);
+                }}
+            />
+        </div>
       <table>
         <thead></thead>
         <tbody>
